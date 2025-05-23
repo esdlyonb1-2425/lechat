@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ConversationController!{% endblock %}
+
+{% block body %}
+<h3>Messenger</h3>
+<h4>You are  id :{{ app.user.id }}  mail: {{ app.user.email }} </h4>
+
+    <hr>
+    <h3>Users</h3>
+{% for user in users %}
+
+    {% if user != app.user %}
+
+        <a href="{{ path('app_conversation_openwith', {id:user.id}) }}">{{ user.email }}</a><br>
+
+    {% endif %}
+
+
+{% endfor%}
+    <hr>
+    <h3>Conversations</h3>
+    {% for conversation in app.user.conversations %}
+        <a href="{{ path('app_conversation_open', {id:conversation.id}) }}">
+            Chat n° {{ conversation.id }}
+            between {% for participant in conversation.participants %}
+                    {% if participant == app.user %} <span><strong>you</strong></span>
+                    {% else %} <span>{{ participant.email }}</span>{% endif %} and
+                    {% endfor %}
+
+        </a><br>
+
+
+    {% endfor %}
+{% endblock %}

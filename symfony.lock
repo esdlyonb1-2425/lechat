@@ -26,6 +26,18 @@
             "migrations/.gitignore"
         ]
     },
+    "nelmio/cors-bundle": {
+        "version": "2.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.5",
+            "ref": "6bea22e6c564fba3a1391615cada1437d0bde39c"
+        },
+        "files": [
+            "config/packages/nelmio_cors.yaml"
+        ]
+    },
     "phpunit/phpunit": {
         "version": "9.6",
         "recipe": {
@@ -143,6 +155,18 @@
             "version": "1.0",
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
+    },
+    "symfony/mercure-bundle": {
+        "version": "0.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "0.3",
+            "ref": "528285147494380298f8f991ee8c47abebaf79db"
+        },
+        "files": [
+            "config/packages/mercure.yaml"
+        ]
     },
     "symfony/messenger": {
         "version": "7.2",
@@ -270,6 +294,18 @@
             "version": "2.20",
             "ref": "c85ff94da66841d7ff087c19cbcd97a2df744ef9"
         }
+    },
+    "symfony/ux-twig-component": {
+        "version": "2.25",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "2.13",
+            "ref": "9b627037a510e20eddb559e06050a34854ce51d6"
+        },
+        "files": [
+            "config/packages/twig_component.yaml"
+        ]
     },
     "symfony/validator": {
         "version": "7.2",
